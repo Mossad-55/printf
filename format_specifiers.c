@@ -41,3 +41,16 @@ int print_percent(__attribute__((unused))va_list list)
 	_write('%');
 	return (1);
 }
+
+/**
+ * print_int - Prints the int
+ * @list: args
+ * Return: int (printed int)
+ */
+int print_int(va_list list)
+{
+	int len;
+
+	len = print_number(list);
+	return (len);
+}
