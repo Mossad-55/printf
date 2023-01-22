@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "main.h"
 
 /**
  * parser - takes a string with a formated symbols and print it.

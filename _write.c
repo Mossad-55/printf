@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "main.h"
 
 /**
  * _write_char - writes a character to stdout.

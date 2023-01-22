@@ -1,4 +1,4 @@
-#include "functions.c"
+#include "main.h"
 
 /**
  * _printf - prints to the console.
