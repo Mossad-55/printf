@@ -14,7 +14,11 @@ int _printf(const char *format, ...)
 			{"s", print_string},
 			{"%", print_percent},
 			{"d", print_int},
-			{"i", print_int}
+			{"i", print_int},
+			{"u", unsigned_integer},
+			{"o", print_octal},
+			{"x", print_hex},
+			{"X", print_heX}
 	};
 
 	va_list list;

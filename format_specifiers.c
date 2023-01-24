@@ -54,3 +54,22 @@ int print_int(va_list list)
 	len = print_number(list);
 	return (len);
 }
+
+/**
+ * unsigned_integer - Prints Unsigned numbers
+ * @list: arguments
+ * Return: Count of numbers
+ */
+int unsigned_integer(va_list list)
+{
+	unsigned int n;
+
+	n = va_arg(list, unsigned int);
+
+	if (n == 0)
+		return (print_unsigned_number(n));
+
+	if (n < 1)
+		return (-1);
+	return (print_unsigned_number(n));
+}
