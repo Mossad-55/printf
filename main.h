@@ -31,6 +31,7 @@ int print_hex(va_list list);
 int print_heX(va_list list);
 int hex_check(int, char);
 int print_octal(va_list list);
+int print_octal(va_list list);
 
 
 int print_unsigned_number(unsigned int);

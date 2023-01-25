@@ -112,3 +112,43 @@ int hex_check(int num, char x)
 		return (Hex[num]);
 	return (0);
 }
+
+/**
+ * print_octal - Prints a number in base_8 (Octal)
+ * @list: Arguments
+ * Return: Count of number printed
+ */
+int print_octal(va_list list)
+{
+	unsigned int num;
+	int len;
+	char *octal;
+	char *str_rev;
+
+	num = va_arg(list, unsigned int);
+
+	if (num == 0)
+		return (_write_char('0'));
+	if (num < 1)
+		return (-1);
+	len = base_len(num, 8);
+
+	octal = malloc(sizeof(char) * len + 1);
+	if (octal == NULL)
+		return (-1);
+	for (len = 0; num > 0; len++)
+	{
+		octal[len] = (num % 8) + 48;
+		num = num / 8;
+
+	}
+	octal[len] = '\0';
+	str_rev = rev_string(octal);
+	if (str_rev == NULL)
+		return (-1);
+
+	write_base(str_rev);
+	free(octal);
+	free(str_rev);
+	return (len);
+}
